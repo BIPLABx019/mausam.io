@@ -30,7 +30,8 @@ Mountain-themed background .
 
 Responsive and scrollable interface that allows users to easily view weather history, forecast, and air quality information.
 
-4.Technologies Used
+4.Technologies Used:
+
 API: Integrated with openweathermap.org (https://openweathermap.org/api) to retrieve real-time weather data and forecasts.
 
 Frontend: Built using HTML, CSS, and JavaScript.
