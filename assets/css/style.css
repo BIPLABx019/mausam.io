@@ -875,6 +875,11 @@ article.container::before {
 \*-----------------------------------*/
 
 @media (min-width:768px) {
+.logo img {
+  width: 300px;
+  height: 22px;
+  padding-left: 10px;
+}
   .container {
     padding: 24px;
   }
