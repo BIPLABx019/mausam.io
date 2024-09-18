@@ -152,7 +152,17 @@ export const updateWeather = function (lat, lon) {
               main: { aqi },
               components: { no2, o3, so2, pm2_5 }
             }] = airPollution.list;
-          
+            let sunrise_time = module.getTime(sunriseUnixUTC,timezone);
+            let sunset_time = module.getTime(sunsetUnixUTC,timezone);
+            if ((sunrise_time[3]==" ")){
+                sunrise_time = sunrise_time.slice(0, 2) + "0" + sunrise_time.slice(2);
+                console.log(sunrise_time);
+            }
+            if ((sunset_time[3]==" ")){
+                sunrise_time = sunset_time.slice(0, 2) + "0" + sunset_time.slice(2);
+                console.log(sunset_time);
+            }
+            
             const card = document.createElement("div");
             card.classList.add("card", "card-lg");
             card.innerHTML = `
@@ -176,7 +186,7 @@ export const updateWeather = function (lat, lon) {
                                             <p class="label-1">NO<sub>2</sub></p>
                                         </li>
                                         <li class="card-item">
-                                            <p class="title-1">${o3.toPrecision(2)}</p>
+                                            <p class="title-1">${o3.toPrecision(3)}</p>
                                             <p class="label-1">O<sub>3</sub></p>
                                         </li>
                                     </ul>
@@ -193,14 +203,14 @@ export const updateWeather = function (lat, lon) {
                                         <span class="m-icon">clear_day</span>
                                         <div>
                                             <p class="label-1">Sunrise</p>
-                                            <p class="title-1">${module.getTime(sunriseUnixUTC,timezone)}</p>
+                                            <p class="title-1">${sunrise_time}</p>
                                         </div>
                                     </div>
                                     <div class="card-item">
                                         <span class="m-icon">clear_night</span>
                                         <div>
                                             <p class="label-1">Sunset</p>
-                                            <p class="title-1">${module.getTime(sunsetUnixUTC,timezone)}</p>
+                                            <p class="title-1">${sunset_time}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -347,16 +357,3 @@ export const updateWeather = function (lat, lon) {
 export const error404 = function (){
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
