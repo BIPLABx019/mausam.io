@@ -367,7 +367,7 @@ export const updateWeather = function (lat, lon) {
         
             L.popup()
                 .setLatLng(parseFloat(lat.slice(4)), parseFloat(lon.slice(4)))
-                .setContent(name)
+                .setContent(`${name}`)
                 .openOn(map);
         });
 
