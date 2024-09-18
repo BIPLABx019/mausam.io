@@ -162,7 +162,7 @@ export const updateWeather = function (lat, lon) {
             // .map is instance of Leaflet map
         
             L.popup()
-                .setLatLng(parseFloat(lat), parseFloat(lon))
+                .setLatLng(parseFloat(lat.slice(4)), parseFloat(lon.slice(4)))
                 .setContent(name)
                 .openOn(map);
         });
