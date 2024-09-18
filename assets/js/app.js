@@ -156,11 +156,9 @@ export const updateWeather = function (lat, lon) {
             let sunset_time = module.getTime(sunsetUnixUTC,timezone);
             if ((sunrise_time[3]==" ")){
                 sunrise_time = sunrise_time.slice(0, 2) + "0" + sunrise_time.slice(2);
-                console.log(sunrise_time);
             }
             if ((sunset_time[3]==" ")){
-                sunrise_time = sunset_time.slice(0, 2) + "0" + sunset_time.slice(2);
-                console.log(sunset_time);
+                sunset_time = sunset_time.slice(0, 2) + "0" + sunset_time.slice(2);
             }
             
             const card = document.createElement("div");
@@ -266,7 +264,6 @@ export const updateWeather = function (lat, lon) {
             `;
 
             for (const [index, data] of forecastList.entries()) {
-                console.log("ooooooo")
                 if (index > 7) break;
                 const {
                   dt: dateTimeUnix,
