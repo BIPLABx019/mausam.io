@@ -370,8 +370,8 @@ body {
 }
 
 .logo img {
-  width: 300px;
-  height: 22px;
+  width: 400px;
+  height: 27px;
   padding-left: 10px;
 }
 
@@ -877,8 +877,7 @@ article.container::before {
 @media (min-width:768px) {
 .logo img {
   width: 300px;
-  height: 22px;
-  padding-left: 10px;
+  height: 20px;
 }
   .container {
     padding: 24px;
