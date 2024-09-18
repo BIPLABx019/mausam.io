@@ -355,7 +355,7 @@ export const updateWeather = function (lat, lon) {
             // Optional: Initial state of the map
             lat: parseFloat(lat.slice(4)),
             lon: parseFloat(lon.slice(4)),
-            zoom: 10,
+            zoom: 8,
             };
         // Initialize Windy API
             windyInit(options, windyAPI => {
