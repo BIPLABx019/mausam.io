@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>MAUSAM.IO</title>
     <link rel="shortcut icon" href="./favicon.svg" type="image/img+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +13,8 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/app.js" type="module"></script>
     <script src="./assets/js/route.js" type="module"></script>
-
+        <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+        <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
 </head>
 
 <body>
@@ -70,6 +72,13 @@
 
                 </section>
 
+                </section>
+                <section class="card card-sm weather-map">
+                    <h1 class="title-2">Weather Map</h1>
+                    <div class="weather-map-data" id="windy">
+                        
+                    </div>
+                </section>
 
 
             </div>
@@ -87,6 +96,7 @@
         </a>
     </section>
 
+    <script src="./assets/js/map.js"></script>
 
 
 </body>
