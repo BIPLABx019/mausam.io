@@ -138,7 +138,7 @@ html {
 
 body {
   
-  Background-image: url("/assets/images/bg.png");
+  Background-image: url("./../../assets/images/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
