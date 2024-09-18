@@ -1138,7 +1138,12 @@ article.container::before {
   }
 }
 
-
+#windy{
+  width: 100%;
+  height: 500px;
+  padding: 30px;
+  border-radius: var(--radius-28);
+}
 
 
 
