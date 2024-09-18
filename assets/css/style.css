@@ -370,10 +370,11 @@ body {
 }
 
 .logo img {
-  width: 400px;
-  height: 27px;
-  padding-left: 30px;
+  width: 150px;
+  height:11px;
+  padding-left: 10px;
 }
+
 
 .header .container,
 .header-actions {
@@ -994,6 +995,12 @@ article.container::before {
 
 
 @media (min-width:1200px) {
+  .logo img {
+  width: 400px;
+  height:27px;
+  padding-left: 30px;
+}
+
   :root {
     --heading: 8rem;
     --title-2: 2rem;
