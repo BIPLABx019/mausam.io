@@ -353,8 +353,8 @@ export const updateWeather = function (lat, lon) {
             verbose: true,
         
             // Optional: Initial state of the map
-            lat: 50.4,
-            lon: 14.3,
+            lat: parseFloat(lat.slice(4)),
+            lon: parseFloat(lon.slice(4)),
             zoom: 5,
             };
         // Initialize Windy API
